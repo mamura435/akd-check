@@ -3,83 +3,126 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Крепкий стиль - Главная</title>
-  <link rel="stylesheet" href="style.css">
+  <title>АлкоМаркет – Главная</title>
+  <!-- Подключаем Google Font для современных красивых шрифтов -->
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Подключаем файл со стилями -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Крепкий стиль</h1>
-      <nav>
-        <ul>
-          <li><a href="index.html">Главная</a></li>
-          <li><a href="catalog.html">Каталог</a></li>
-          <li><a href="offers.html">Акции</a></li>
-          <li><a href="about.html">О нас</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
-        </ul>
-      </nav>
-    </div>
+
+  <!-- Шапка сайта (Header) -->
+  <header class="header">
+    <!-- Логотип сайта -->
+    <a href="#" class="logo">Алко<span>Маркет</span></a>
+    <!-- Переключатель меню (чекбокс) для мобильной версии -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    <!-- Иконка-бургер для мобильного меню -->
+    <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    <!-- Навигационное меню -->
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">Каталог</a></li>
+        <li><a href="#">О нас</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <section class="promo">
-    <img src="images/sale-banner.jpg" alt="Скидки на виски до 20%">
-    <div class="promo-text">
-      <h2>Скидки на виски до 20%</h2>
-      <a href="catalog.html#whiskey" class="btn">Посмотреть</a>
+  <!-- Баннер с акцией (Hero Section) -->
+  <section id="hero" class="hero">
+    <h1>Скидки на виски до 20%</h1>
+    <a href="#" class="btn">Посмотреть</a>
+  </section>
+
+  <!-- Блок с категориями (Categories Section) -->
+  <section id="categories" class="categories-section">
+    <h2>Наши категории</h2>
+    <div class="categories">
+      <!-- Карточка категории -->
+      <a href="#" class="category-card">
+        <!-- Изображение категории (замените src на путь к вашему изображению) -->
+        <img src="images/wine.jpg" alt="Вино">
+        <h3>Вино</h3>
+      </a>
+      <a href="#" class="category-card">
+        <img src="images/beer.jpg" alt="Пиво">
+        <h3>Пиво</h3>
+      </a>
+      <a href="#" class="category-card">
+        <img src="images/whiskey.jpg" alt="Виски">
+        <h3>Виски</h3>
+      </a>
+      <a href="#" class="category-card">
+        <img src="images/vodka.jpg" alt="Водка">
+        <h3>Водка</h3>
+      </a>
+      <!-- Добавьте больше категорий при необходимости -->
     </div>
   </section>
 
-  <section class="categories">
-    <div class="container">
-      <h2>Наши категории</h2>
-      <div class="category-list">
-        <div class="category-item">
-          <img src="images/wine.jpg" alt="Вино">
-          <a href="catalog.html#wine">Вино</a>
-        </div>
-        <div class="category-item">
-          <img src="images/whiskey.jpg" alt="Виски">
-          <a href="catalog.html#whiskey">Виски</a>
-        </div>
-        <!-- Добавь другие категории аналогично -->
+  <!-- Секция "Почему выбирают нас" (Benefits/Why Us Section) -->
+  <section id="why-us" class="why-us-section">
+    <h2>Почему выбирают нас</h2>
+    <div class="benefits">
+      <!-- Карточка преимущества -->
+      <div class="benefit-card">
+        <div class="benefit-icon">📦</div>
+        <h3>Более 1000 наименований напитков</h3>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">🚚</div>
+        <h3>Доставка по всей Германии</h3>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-icon">✅</div>
+        <h3>Гарантия подлинности продукции</h3>
       </div>
     </div>
   </section>
 
-  <section class="advantages">
-    <div class="container">
-      <h2>Почему выбирают нас</h2>
-      <ul>
-        <li>Более 1000 наименований напитков</li>
-        <li>Доставка по всей Германии</li>
-        <li>Гарантия подлинности продукции</li>
-      </ul>
+  <!-- Секция с отзывами клиентов (Customer Reviews Section) -->
+  <section id="reviews" class="reviews-section">
+    <h2>Отзывы наших клиентов</h2>
+    <div class="testimonials">
+      <!-- Карточка отзыва -->
+      <div class="testimonial-card">
+        <blockquote>
+          <p>Отличный сервис и быстрая доставка! Буду заказывать еще.</p>
+          <footer>— Дима, Берлин</footer>
+        </blockquote>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>
+          <p>Большой выбор и хорошие цены. Рекомендую!</p>
+          <footer>— Анна, Мюнхен</footer>
+        </blockquote>
+      </div>
+      <div class="testimonial-card">
+        <blockquote>
+          <p>Качество продукции на высоте. Магазин оправдал ожидания.</p>
+          <footer>— Олег, Гамбург</footer>
+        </blockquote>
+      </div>
     </div>
   </section>
 
-  <section class="testimonials">
-    <div class="container">
-      <h2>Отзывы наших клиентов</h2>
-      <blockquote>
-        <p>Отличный сервис и быстрая доставка! Буду заказывать еще.</p>
-        <cite>Анна, Берлин</cite>
-      </blockquote>
-      <!-- Добавь другие отзывы аналогично -->
-    </div>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 АлкоМаркет. Все права защищены.</p>
-      <p>Телефон: +49 123 456 789</p>
-      <p>Email: info@alcomarket.de</p>
-      <div class="social-links">
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <!-- Добавь другие соцсети -->
+  <!-- Подвал сайта (Footer) -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col">
+        <p>© 2025 АлкоМаркет. Все права защищены.</p>
+      </div>
+      <div class="footer-col">
+        <p>Телефон: +49 123 456 789 | Email: info@alkomarket.de</p>
+        <p>Мы в соцсетях: 
+          <a href="#">Facebook</a> | 
+          <a href="#">Instagram</a>
+        </p>
       </div>
     </div>
   </footer>
+
 </body>
 </html>
